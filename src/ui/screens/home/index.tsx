@@ -26,6 +26,9 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
     setSelectedCategory,
   } = useHomeUI({} as HomeScreenProps);
 
+  const ITEM_HEIGHT = 264; // card height + margin
+  const NUM_COLUMNS = 2;
+
   // extract the unique categories from the products for filtering
   const categories = Array.from(new Set(filteredProducts.map(p => p.category)));
 
@@ -70,10 +73,23 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
       ) : (
         <FlatList
           data={filteredProducts}
-          numColumns={2}
+          numColumns={NUM_COLUMNS}
           columnWrapperStyle={styles.listColumnStyle}
           keyExtractor={item => item.id.toString()}
           renderItem={({ item }) => <ProductItem product={item} />}
+          // 🔽 Performance Optimizations
+          initialNumToRender={10} //  renders 10 items at startup
+          maxToRenderPerBatch={10} //  renders 10 items per batch
+          windowSize={5} // keep ~5 screens worth of rows in memory
+          removeClippedSubviews={true} // unmount off-screen items
+          getItemLayout={(data, index) => {
+            const row = Math.floor(index / NUM_COLUMNS);
+            return {
+              length: ITEM_HEIGHT,
+              offset: ITEM_HEIGHT * row,
+              index,
+            };
+          }}
           onEndReached={() => {
             if (hasMore && !loading) {
               loadMore();

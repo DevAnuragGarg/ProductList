@@ -8,6 +8,7 @@ export const styles = StyleSheet.create({
   container: {
     width: ITEM_WIDTH,
     marginBottom: 10,
+    height: 264,
     padding: 10,
     borderRadius: 10,
     borderColor: 'white',
@@ -18,9 +19,8 @@ export const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
-    height: ITEM_WIDTH,
-    borderRadius: 10,
-    marginBottom: 5,
+    height: 90,
+    resizeMode: 'cover',
   },
   innerContainer: {
     marginBottom: 5,
@@ -38,15 +38,12 @@ export const styles = StyleSheet.create({
     marginTop: 3,
     fontSize: 12,
     color: 'white',
+    flexShrink: 1,
   },
   amount: {
     fontSize: 14,
-    marginTop: 5,
     fontWeight: 'bold',
     color: TERTIARY_COLOR,
-  },
-  date: {
-    fontSize: 14,
-    color: 'white',
+    marginTop: 'auto',
   },
 });
