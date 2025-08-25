@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { MAIN_COLOR, SECONDARY_COLOR } from '../../../helper/colors';
+import { MAIN_COLOR, SECONDARY_COLOR } from '../../utils/colors';
 
 export const styles = StyleSheet.create({
   root: {
@@ -53,7 +53,7 @@ export const styles = StyleSheet.create({
     borderRadius: 4,
     backgroundColor: SECONDARY_COLOR,
     paddingHorizontal: 10,
-    fontSize: 12,
+    fontSize: 16,
     height: 50,
     color: 'white',
   },

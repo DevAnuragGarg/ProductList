@@ -1,5 +1,5 @@
 import { StyleSheet, Dimensions } from 'react-native';
-import { SECONDARY_COLOR, TERTIARY_COLOR } from '../../../helper/colors';
+import { SECONDARY_COLOR, TERTIARY_COLOR } from '../../utils/colors';
 
 const { width } = Dimensions.get('window');
 const ITEM_WIDTH = (width - 16 * 2 - 10) / 2; // 2-column grid with padding + spacing

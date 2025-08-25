@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Product } from '../../../api/types/product';
-import { fetchProducts } from '../../../api/productAPI';
+import { Product } from '../api/types/product';
+import { fetchProducts } from '../api/productAPI';
 
 // this hook will manage product data fetching, pagination, loading, and error states
 // it can be reused in other screens if needed

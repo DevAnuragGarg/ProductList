@@ -1,4 +1,4 @@
-import { useProducts } from './useProducts.hook';
+import { useProducts } from '../../hooks/useProducts.hook';
 import { HomeScreenProps } from './props.type';
 import { useState, useMemo } from 'react';
 

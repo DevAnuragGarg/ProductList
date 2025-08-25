@@ -38,6 +38,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
       <TextInput
         style={styles.textInput}
         placeholder="Search product.."
+        placeholderTextColor="white"
         value={searchText}
         onChangeText={setSearchText}
       />

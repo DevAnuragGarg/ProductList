@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { SECONDARY_COLOR } from '../../../helper/colors';
+import { SECONDARY_COLOR } from '../../utils/colors';
 
 export const styles = StyleSheet.create({
   button: {

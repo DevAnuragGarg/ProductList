@@ -1,4 +1,4 @@
-import { Product } from '../../../api/types/product';
+import { Product } from '../../api/types/product';
 
 export type ProductItemProps = {
   product: Product;
